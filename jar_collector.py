@@ -34,6 +34,8 @@ def run_server():
 
     shell = list['launch_shell'][shell_in - 1]
 
+    os.system("chmod +x '" + shell + "'")
+
     os.system("'" + shell + "'")
 
 
