@@ -34,7 +34,7 @@ def run_server():
 
     shell = list['launch_shell'][shell_in - 1]
 
-    os.system("./'" + shell + "'")
+    os.system("'" + shell + "'")
 
 
 # Saving the server info to a csv file
@@ -59,7 +59,7 @@ def save_server_info(data_list):
 def find_shells(data_list):
 
     # Appending .sh to the directory
-    path_search = data_list[3] + "\*.sh"
+    path_search = data_list[3] + "*.sh"
 
     # Getting list of all shell scripts in directory
     list_of_shells = glob.glob(path_search)
