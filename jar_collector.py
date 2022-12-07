@@ -27,7 +27,7 @@ def run_server():
 
     # Printing out the list of just the server names
     for x in range(0, len(list)):
-        print(str(list_num) + ").", str(list.iloc[x][4])), "\n"
+        print(str(list_num) + ").", str(list.iloc[x][0])), "\n"
         list_num += 1
 
     shell_in = int(input())
