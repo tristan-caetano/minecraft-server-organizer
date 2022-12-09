@@ -36,8 +36,7 @@ def run_server():
     shell_loc = list['directory'][shell_in - 1]
 
     os.system("chmod +x '" + shell + "'")
-    os.system("cd '" + shell_loc + "'")
-    os.system("'" + shell + "'")
+    os.system("(cd '" + shell_loc + "' ; '" + shell + "')")
 
 
 # Saving the server info to a csv file
