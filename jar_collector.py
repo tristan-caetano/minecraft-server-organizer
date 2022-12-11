@@ -30,11 +30,14 @@ def run_server():
         print(str(list_num) + ").", str(list.iloc[x][0])), "\n"
         list_num += 1
 
+    # Getting the user choice for the server that they want to run
     shell_in = int(input())
 
+    # Getting shell file information
     shell = list['launch_shell'][shell_in - 1]
     shell_loc = list['directory'][shell_in - 1]
 
+    # Running the server
     os.system("chmod +x '" + shell + "'")
     os.system("(cd '" + shell_loc + "' ; '" + shell + "')")
 
@@ -100,7 +103,7 @@ def get_server_location():
             version = input("\nWhat version of Minecraft is it?\n")
 
             # Getting the directory of the server, and appending server.properties
-            directory = input("\nInput the directory of the server folder.\nDo NOT add a '/' to the end.\n")
+            directory = input("\nInput the directory of the server folder.\nMake sure there is a slash at the end.\n")
             server_properties = directory + "/server.properties"
 
             # Details completed, skipping if
@@ -141,9 +144,15 @@ def main_menu():
             print(str(list_num) + ").", option), "\n"
             list_num += 1
         
-        menu_in = input("\nEnter 'q' to quit.\n")
+        menu_in = input("\nEnter 'q' to quit, 's' to shutdown, or 'r' to reboot.\n")
 
-        if menu_in == "q":
+        if menu_in == "q" or menu_in == "Q":
+            quit()
+        elif menu_in == "s" or menu_in == "S":
+            os.system("shutdown")
+            quit()
+        elif menu_in == "r" or menu_in == "R":
+            os.system("reboot")
             quit()
         elif menu_in == '1':
             get_server_location()
