@@ -9,7 +9,7 @@ void setup() {
   pinMode(PWR_PIN, OUTPUT);
 
   digitalWrite(PWR_PIN, HIGH);
-  delay(100.);
+  delay(100);
   digitalWrite(PWR_PIN, LOW);
 }
 
