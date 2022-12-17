@@ -7,7 +7,7 @@
 
 #define PWR_PIN 0
 
-void main(1) {
+void main(void) {
 
   wiringPiSetup();
 
