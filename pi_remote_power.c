@@ -22,7 +22,7 @@ int main() {
 
     // Sending a brief signal
     digitalWrite(PWR_PIN, HIGH);
-    delay(200);
+    delay(500);
     digitalWrite(PWR_PIN, LOW);
 
     return(0);
