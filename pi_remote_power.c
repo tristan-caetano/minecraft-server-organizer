@@ -23,6 +23,6 @@ void main(void) {
     delay(100);
     digitalWrite(PWR_PIN, LOW);
 
-    return void;
+    return(void);
 
 }
