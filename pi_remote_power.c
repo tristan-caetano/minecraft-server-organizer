@@ -10,7 +10,7 @@
 #define PWR_PIN 0
 
 // Function for turning on server
-void main(void) {
+int main() {
 
     // Setting up wiringPi
     wiringPiSetup();
@@ -23,6 +23,6 @@ void main(void) {
     delay(100);
     digitalWrite(PWR_PIN, LOW);
 
-    return(void);
+    return(0);
 
 }
