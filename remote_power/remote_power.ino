@@ -1,6 +1,8 @@
 // Tristan Caetano
 // Remote Power to Server
 
+// This script is an arduino test and is NOT needed for the program to work
+
 // Server Power Pin
 #define PWR_PIN 8
 

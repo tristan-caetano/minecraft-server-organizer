@@ -2,6 +2,8 @@
 // Pi Remote Power
 // Using Raspberry Pi to remotely turn on my server
 
+// This script is run from the pi
+
 // Including Libraries
 #include <wiringPi.h>
 #include <stdio.h>

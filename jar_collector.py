@@ -2,14 +2,17 @@
 # Minecraft Server Organizer
 # Script that collects and organizes Minecraft server properties and jar files
 
+# This script should be placed in the root of the server and run from it
+
 # Importing packages
 from os.path import exists
 import pandas as pd
 import glob
 import os
+import sys
 
 # Script for running server
-def run_server():
+def run_server(arg):
 
     # Naming csv file
     server_list = "server_list.csv"
@@ -22,16 +25,22 @@ def run_server():
     else:
         print("No .csv found.\nMake sure the .csv is named 'server_list.csv'.\nExiting to main menu.\n")
         main_menu()
-    
-    print("\nPlease input the number of the server that you would like to run.\n")
 
-    # Printing out the list of just the server names
-    for x in range(0, len(list)):
-        print(str(list_num) + ").", str(list.iloc[x][0])), "\n"
-        list_num += 1
+    # If the program is run manually
+    if arg is None:
+        print("\nPlease input the number of the server that you would like to run.\n")
 
-    # Getting the user choice for the server that they want to run
-    shell_in = int(input())
+        # Printing out the list of just the server names
+        for x in range(0, len(list)):
+            print(str(list_num) + ").", str(list.iloc[x][0])), "\n"
+            list_num += 1
+
+        # Getting the user choice for the server that they want to run
+        shell_in = int(input())
+
+    # If the server is run from the pi with arguments
+    else:
+        shell_in = int(arg)
 
     # Getting shell file information
     shell = list['launch_shell'][shell_in - 1]
@@ -157,10 +166,22 @@ def main_menu():
         elif menu_in == '1':
             get_server_location()
         elif menu_in == '2':
-            run_server()
+            run_server(None)
         else:
             print("\nCommand not found, please input an available number or 'q'.\n")
 
         list_num = 1
 
-main_menu()
+# Determining if the server is run with arguments or not
+def main():
+
+    # If the server is run with arguments, skip main menu and run specified server
+    if __name__ == "__main__":
+        if len(sys.argv) > 1:
+            run_server(sys.argv[1])
+
+        # If the server is run without arguments, present the main menu    
+        else:
+            main_menu()
+
+main()
