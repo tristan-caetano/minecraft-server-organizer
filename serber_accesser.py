@@ -28,10 +28,12 @@ def run_commands():
     print("\nConnection successful!")
 
     # Turning on and starting server
-    pi_relay_comm = "Documents/Code/minecraft-server-organizer/pi"
-    pi_to_serber_comm = "python3 Documents/Code/minecraft-server-organizer/run_from_pi.py"
+    pi_cd_comm = "cd Documents/Code/minecraft-server-organizer"
+    pi_relay_comm = "./pi"
+    pi_to_serber_comm = "python3 run_from_pi.py"
 
     print("Turning on server.")
+    ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(pi_cd_comm)
     ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(pi_relay_comm)
     time.sleep(40)
     print("Starting server")
