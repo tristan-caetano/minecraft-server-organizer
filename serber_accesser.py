@@ -33,7 +33,7 @@ def run_commands():
 
     print("Turning on server.")
     ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(pi_relay_comm)
-    time.sleep(30)
+    time.sleep(40)
     print("Starting server")
     ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command(pi_to_serber_comm)
 
