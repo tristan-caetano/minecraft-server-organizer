@@ -7,7 +7,7 @@
 
 #define PWR_PIN 0
 
-void main(void) {
+void main(1) {
 
   wiringPiSetup();
 
@@ -19,4 +19,6 @@ void main(void) {
     delay(100);
     digitalWrite(PWR_PIN, LOW);
     delay(100);
+    }
+
 }
