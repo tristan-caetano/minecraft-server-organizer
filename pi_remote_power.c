@@ -9,12 +9,14 @@
 
 void main(void) {
 
+  wiringPiSetup();
+
   pinMode(PWR_PIN, OUTPUT);
 
-  while(true){
+  while(1){
 
     digitalWrite(PWR_PIN, HIGH);
     delay(100);
     digitalWrite(PWR_PIN, LOW);
-    delay(100)
+    delay(100);
 }
