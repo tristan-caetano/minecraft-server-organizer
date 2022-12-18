@@ -179,6 +179,7 @@ def main():
     if __name__ == "__main__":
         if len(sys.argv) > 1:
             run_server(sys.argv[1])
+            main_menu()
 
         # If the server is run without arguments, present the main menu    
         else:
