@@ -87,7 +87,7 @@ def find_shells(data_list):
         list_num += 1
     
     # Asking user to choose file found
-    chosen_num = int(input("Which shell is the launch shell?"))
+    chosen_num = int(input("\nWhich shell is the launch shell?\n"))
     data_list.append(list_of_shells[chosen_num - 1])
 
     # Saving data to csv
