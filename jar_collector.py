@@ -158,10 +158,10 @@ def main_menu():
         if menu_in == "q" or menu_in == "Q":
             quit()
         elif menu_in == "s" or menu_in == "S":
-            os.system("shutdown")
+            os.system("sudo shutdown -h now")
             quit()
         elif menu_in == "r" or menu_in == "R":
-            os.system("reboot")
+            os.system("sudo reboot -nf")
             quit()
         elif menu_in == '1':
             get_server_location()
