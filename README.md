@@ -1,6 +1,15 @@
 # minecraft-server-organizer
 This project uses a series of scripts, a Raspberry Pi, and a relay to remotely start a Minecraft server. Anyone given the main program and their IP allowed will be able to turn on the computer as well as the Minecraft server.
 
+# Packages Required
+This project requires the following packages:
+
+**paramiko**: Performs the required SSH connections.
+
+**glob**: Searches directory for file paths.
+
+**pandas**: Parses the .csv files.
+
 ## Initial Setup
 **THIS PROGRAM IS SETUP TO RUN A MINECRAFT SERVER ON A LINUX MACHINE, ALTHOUGH THE START SCRIPT CAN RUN ON ANY DEVICE THAT HAS PYTHON**
 
@@ -23,7 +32,6 @@ A menu will appear in the terminal, follow it to add a minecraft server to the l
 |------------|------------|------------|------------|------------|
 
 ## SSH Setup
-
 These scripts require for there to be an SSH server on both the Raspberry Pi, and the Minecraft server. 
 
 The Raspberry Pi's SSH server should be accessible from anywhere such as being portforwarded. 
@@ -46,5 +54,4 @@ This file needs to be placed in the same directory as the **serber_accesser.py**
 Yes, this isn't particularly secure, but it can only be accessed once the password is already known. Not to mention the whitelist and RSA keys. The password is really just one step in what should be 2 or 3 step authentication.
 
 ## Start Script
-
-Once all scripts are placed in their correct locations, **pi_remote_power.c** is compiled, and the SSH servers are setup, all that is needed to do is to run `python3 serber_accesser.py`. However
+Once all scripts are placed in their correct locations, **pi_remote_power.c** is compiled, and the SSH servers are setup, all that is needed to do is to run `python3 serber_accesser.py`.
