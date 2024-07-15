@@ -1,7 +1,7 @@
 # minecraft-server-organizer
 This project uses a series of scripts, a Raspberry Pi, and a relay to remotely start a Minecraft server. Anyone given the main program and their IP allowed will be able to turn on the computer as well as the Minecraft server.
 
-# Packages Required
+## Packages Required
 This project requires the following packages:
 
 **paramiko**: Performs the required SSH connections.
