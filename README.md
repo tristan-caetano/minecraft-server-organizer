@@ -45,9 +45,9 @@ Finally, a file **ssh_data.csv** must be created, and the following format must 
 |serverip|username|password|
 |--------|-------|---------|
 
-The first column is the **public** serverip, username, and password  of the Raspberry Pi.
+The first row after the header row is the **public** serverip, username, and password  of the Raspberry Pi.
 
-The second column is the **local** serverip, username, and password  of the Minecraft server.
+The second row after the header row is the **local** serverip, username, and password  of the Minecraft server.
 
 This file needs to be placed in the same directory as the **serber_accesser.py** on the client machine **and** the **run_from_py.py** on the Raspberry Pi.
 
