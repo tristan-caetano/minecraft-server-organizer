@@ -1,2 +1,3 @@
 # Server List should not be pushed
 server_list.csv
+.env

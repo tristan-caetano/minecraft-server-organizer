@@ -10,12 +10,15 @@ import pandas as pd
 import glob
 import os
 import sys
+from dotenv import load_dotenv
 
 # Script for running server
 def run_server(arg):
 
     # Naming csv file
-    server_list = "server_list.csv"
+    # Getting id from name in db
+    load_dotenv()
+    server_list = os.getenv("CSV_LOC")
 
     list_num = 1
 
